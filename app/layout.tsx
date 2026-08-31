@@ -24,6 +24,9 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title,
     description,
+    keywords: ["small business website design", "business app development", "Google Workspace setup", "Jane integrated clinic app", "massage clinic app", "physiotherapy clinic app", "chiropractic clinic app", "website and app management"],
+    alternates: { canonical: "https://emilygoodai.com" },
+    robots: { index: true, follow: true },
     icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
     openGraph: { title, description, images: [socialImage] },
     twitter: { card: "summary_large_image", title, description, images: [socialImage] },

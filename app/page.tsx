@@ -1,11 +1,38 @@
 "use client";
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://emilygoodai.com/#business",
+      name: "Emily Good AI",
+      url: "https://emilygoodai.com",
+      email: "hello@emilygoodai.com",
+      description: "Business launch services, website design, custom apps, Google Workspace setup, and a Jane-integrated clinic app.",
+      areaServed: "Canada",
+      priceRange: "$$$",
+      knowsAbout: ["Small business websites", "Business apps", "Google Workspace", "Jane App integrations", "Clinic software"],
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: [
+        { "@type": "Question", name: "How much does a small business website cost?", acceptedAnswer: { "@type": "Answer", text: "Emily Good AI website projects start at CAD $3,500. Larger sites and business launches receive a scope-based quote." } },
+        { "@type": "Question", name: "Can I add the clinic app to my existing website?", acceptedAnswer: { "@type": "Answer", text: "Yes. Clinics can purchase the Jane-integrated app without replacing their current website." } },
+        { "@type": "Question", name: "Does the clinic app replace Jane?", acceptedAnswer: { "@type": "Answer", text: "No. The clinic app integrates with Jane and gives patients a branded place to view appointments, chat, and receive home care." } },
+        { "@type": "Question", name: "Do you provide website and app maintenance?", acceptedAnswer: { "@type": "Answer", text: "Yes. Monthly care plans cover updates, maintenance, and support for websites and apps." } },
+      ],
+    },
+  ],
+};
+
 export default function Home() {
   return (
     <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <nav className="nav" aria-label="Primary navigation">
         <a className="brand" href="#top" aria-label="Emily Good AI home"><span className="brand-mark"><b>EG</b></span><span>Emily Good <i>AI</i></span></a>
-        <div className="nav-links"><a href="#services">Services</a><a href="#app">Clinic app</a><a href="#contact">Contact</a></div>
+        <div className="nav-links"><a href="#services">Services</a><a href="#app">Clinic app</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a></div>
         <a className="nav-cta" href="#contact">Start a project <span>↗</span></a>
       </nav>
       <section className="hero" id="top">
@@ -61,12 +88,60 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="pricing" id="pricing">
+        <div className="pricing-head">
+          <div><p className="kicker">Suggested investment</p><h2>Clear starting points.<br/><em>Room to scale.</em></h2></div>
+          <p>These prices fit focused small-business projects. I confirm the final investment after we define the pages, features, integrations, and support your project needs.</p>
+        </div>
+        <div className="pricing-grid">
+          <article className="price-card">
+            <div className="price-top"><span>01</span><p>Website</p></div>
+            <h3>Business Website</h3><p className="price-note">For businesses that need a credible site with a clear path to contact or book.</p>
+            <p className="price"><small>Starting at</small><b>$3,500</b><i>CAD</i></p>
+            <ul><li>Custom responsive design</li><li>Core service pages</li><li>On-page SEO setup</li><li>Contact or booking path</li></ul>
+            <a className="price-link" href="mailto:hello@emilygoodai.com?subject=Business%20website%20inquiry">Discuss your website <span>↗</span></a>
+          </article>
+          <article className="price-card preferred">
+            <div className="price-flag">Most requested</div>
+            <div className="price-top"><span>02</span><p>Launch</p></div>
+            <h3>Business Launch</h3><p className="price-note">For a new business that needs its public presence and internal tools built together.</p>
+            <p className="price"><small>Starting at</small><b>$6,500</b><i>CAD</i></p>
+            <ul><li>Launch planning</li><li>Custom business website</li><li>Google Workspace setup</li><li>Connected client systems</li></ul>
+            <a className="price-link" href="mailto:hello@emilygoodai.com?subject=Business%20launch%20inquiry">Plan your launch <span>↗</span></a>
+          </article>
+          <article className="price-card app-price">
+            <div className="price-top"><span>03</span><p>Clinic app</p></div>
+            <h3>Branded Clinic App</h3><p className="price-note">For massage, physiotherapy, and chiropractic clinics that use Jane.</p>
+            <p className="price"><small>Setup from</small><b>$4,500</b><i>CAD</i></p>
+            <p className="monthly">plus management from <strong>$399/month</strong></p>
+            <ul><li>Clinic branding</li><li>Jane integration</li><li>Patient and team access</li><li>Chat and home care tools</li></ul>
+            <a className="price-link" href="mailto:hello@emilygoodai.com?subject=Clinic%20app%20inquiry">Discuss your clinic <span>↗</span></a>
+          </article>
+        </div>
+        <div className="add-ons">
+          <p><span>Google Workspace setup</span><strong>from $750 CAD</strong></p>
+          <p><span>Website care</span><strong>from $225/month</strong></p>
+          <p><span>Custom business apps</span><strong>from $12,000 CAD</strong></p>
+        </div>
+      </section>
+
       <section className="options">
         <div><p className="kicker">Ways to work together</p><h2>Choose the scope<br/><em>that fits.</em></h2></div>
         <div className="option-list">
           <article><span>01</span><h3>Complete Business Build</h3><p>Launch your website, app, and Google Workspace under one plan.</p></article>
           <article><span>02</span><h3>Standalone App</h3><p>Add the clinic app to your current business without rebuilding your website.</p></article>
           <article><span>03</span><h3>Ongoing Management</h3><p>Add monthly website and app updates, maintenance, and support after launch.</p></article>
+        </div>
+      </section>
+
+      <section className="faq" id="faq">
+        <div className="faq-title"><p className="kicker">Common questions</p><h2>Before we<br/><em>start.</em></h2></div>
+        <div className="faq-list">
+          <details><summary>How much does a small business website cost?<span>+</span></summary><p>Website projects start at $3,500 CAD. A larger site with more pages, custom functions, or content support receives a scope-based quote.</p></details>
+          <details><summary>Can I add the clinic app to my existing website?<span>+</span></summary><p>Yes. You can purchase the clinic app without replacing your current website. I match the app to your clinic branding and connect it with Jane.</p></details>
+          <details><summary>Does the clinic app replace Jane?<span>+</span></summary><p>No. Jane continues to manage the clinic workflow it handles now. Your app gives patients a branded place to view appointments, chat, and receive home care.</p></details>
+          <details><summary>Do you provide monthly website and app support?<span>+</span></summary><p>Yes. Monthly plans can cover updates, maintenance, and support. The fee depends on the website, app, and response time you need.</p></details>
+          <details><summary>Can you build a custom app outside healthcare?<span>+</span></summary><p>Yes. I scope custom apps around the people, tasks, and data involved in your business. Custom app projects start at $12,000 CAD.</p></details>
         </div>
       </section>
 
