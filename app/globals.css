@@ -2,16 +2,17 @@
 
 :root { --wine:#321523; --rose:#d4a3a5; --blush:#f0ddda; --paper:#f7f2ed; }
 * { box-sizing:border-box; }
+::selection { background:#d4a3a5; color:#321523; }
 html { scroll-behavior:smooth; }
 body { margin:0; background:var(--paper); color:#21141f; font-family:Arial,Helvetica,sans-serif; }
 a { color:inherit; text-decoration:none; }
-.nav { height:92px; padding:0 5vw; display:flex; align-items:center; justify-content:space-between; background:var(--wine); color:#fff; border-bottom:1px solid #ffffff24; position:relative; z-index:10; }
+.nav { height:84px; padding:0 5vw; display:flex; align-items:center; justify-content:space-between; background:#321523ed; color:#fff; border-bottom:1px solid #ffffff24; position:sticky; top:0; z-index:20; backdrop-filter:saturate(140%) blur(18px); }
 .brand { display:flex; align-items:center; gap:13px; font-size:15px; letter-spacing:.08em; text-transform:uppercase; }
 .brand i { font-family:Georgia,serif; color:var(--rose); text-transform:none; }
 .brand-mark { width:39px; height:39px; border:1px solid #d4a3a599; display:grid; place-items:center; transform:rotate(45deg); }
 .brand-mark b { font-family:Georgia,serif; font-size:12px; transform:rotate(-45deg); font-weight:400; }
 .nav-links { display:flex; gap:36px; font-size:12px; text-transform:uppercase; letter-spacing:.13em; color:#dfcfd4; }
-.nav-cta { font-size:12px; text-transform:uppercase; letter-spacing:.12em; border-bottom:1px solid var(--rose); padding:9px 0; }
+.nav-cta { min-height:44px; font-size:12px; text-transform:uppercase; letter-spacing:.12em; border-bottom:1px solid var(--rose); padding:14px 0 9px; }
 .hero { min-height:680px; background:var(--wine); color:#fff; display:grid; grid-template-columns:1.05fr .95fr; position:relative; overflow:hidden; padding:72px 5vw 88px; }
 .hero:before { content:""; position:absolute; inset:0; background-image:linear-gradient(#ffffff08 1px,transparent 1px),linear-gradient(90deg,#ffffff08 1px,transparent 1px); background-size:48px 48px; mask-image:linear-gradient(to right,transparent,#000); }
 .hero-glow { position:absolute; width:520px; height:520px; border-radius:50%; right:7%; top:15%; background:#963a692e; filter:blur(80px); }
@@ -22,8 +23,11 @@ h1 { font-family:Georgia,"Times New Roman",serif; font-weight:400; font-size:cla
 h1 em { font-weight:400; color:var(--blush); }
 .lede { max-width:560px; font-family:Georgia,serif; font-size:19px; line-height:1.65; color:#d7c5ca; margin:38px 0 32px; }
 .hero-actions { display:flex; align-items:center; gap:32px; }
-.button { display:inline-flex; padding:15px 20px; align-items:center; font-size:12px; text-transform:uppercase; letter-spacing:.13em; }
+.button { min-height:46px; display:inline-flex; padding:15px 20px; align-items:center; justify-content:center; font-size:12px; text-transform:uppercase; letter-spacing:.13em; transition:transform .18s ease,background-color .18s ease,color .18s ease; }
 .primary { background:var(--blush); color:var(--wine); }
+.primary:hover,.contact-button:hover { background:#fff5f0; }
+.button:active,.nav-cta:active,.service a:active { transform:scale(.97); }
+a:focus-visible { outline:2px solid var(--rose); outline-offset:5px; }
 .primary span,.nav-cta span { color:var(--rose); margin-left:8px; }
 .text-link { font-size:12px; letter-spacing:.11em; text-transform:uppercase; color:#e9dce0; }
 .text-link span { margin-left:8px; color:var(--rose); }
@@ -51,3 +55,10 @@ h1 em { font-weight:400; color:var(--blush); }
 .options{padding:130px 8vw;display:grid;grid-template-columns:.8fr 1.2fr;gap:10vw;background:#f3ece6}.options .kicker{margin-bottom:30px}.option-list article{display:grid;grid-template-columns:45px .7fr 1fr;gap:25px;padding:32px 0;border-top:1px solid #d7c7c1;align-items:start}.option-list article:last-child{border-bottom:1px solid #d7c7c1}.option-list span{font-size:9px;color:#9a6278}.option-list h3{font-size:22px}.option-list p{font-size:13px;line-height:1.7;color:#76656b;margin:0}.contact{position:relative;overflow:hidden;text-align:center;background:#3b182b;color:#fff;padding:130px 20px 140px}.contact .kicker{justify-content:center}.contact h2{font-size:clamp(48px,7vw,90px);position:relative;z-index:2;margin:28px 0}.contact>p:not(.kicker){font-family:Georgia,serif;color:#ceb9c1;line-height:1.7;max-width:520px;margin:0 auto 34px}.contact-button{position:relative;z-index:2;background:#ead9d5;color:#3b182b}.contact-orbit{position:absolute;border:1px solid #d4a3a526;border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%)}.contact-orbit.one{width:650px;height:650px}.contact-orbit.two{width:930px;height:930px}footer{background:#21101a;color:#fff;display:grid;grid-template-columns:1fr 1fr 1fr;align-items:center;padding:42px 5vw;border-top:1px solid #ffffff18}footer>p{text-align:center;font-family:Georgia,serif;font-style:italic;color:#a88e98;font-size:13px}footer>div{display:flex;justify-content:flex-end;gap:25px;font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:#9d8790}
 @media(max-width:1000px){.service-grid{grid-template-columns:1fr 1fr}.app-section{grid-template-columns:1fr}.app-visual{min-height:720px}.options{grid-template-columns:1fr}.section-intro{grid-template-columns:1fr}.section-intro>p:last-child{max-width:570px}.service{min-height:420px}footer{grid-template-columns:1fr;gap:20px;text-align:center}footer>div{justify-content:center}footer>p{margin:0}}
 @media(max-width:620px){.services{padding:90px 22px}.service-grid{grid-template-columns:1fr}.app-visual{min-height:620px}.phone{transform-origin:center}.phone-front{left:42%;transform:translate(-50%,-50%) rotate(-3deg) scale(.82)}.phone-back{left:52%;transform:translate(0,-50%) rotate(8deg) scale(.82)}.chat-bubble{left:7%;bottom:8%}.app-copy{padding:85px 24px}.options{padding:90px 24px}.option-list article{grid-template-columns:35px 1fr}.option-list p{grid-column:2}.contact{padding:100px 20px}.contact-orbit.one{width:480px;height:480px}footer>div{flex-direction:column;gap:9px}.service{min-height:390px}}
+
+/* Refined interaction system: quiet surfaces, clear actions, visible focus. */
+.service{transition:background-color .25s ease,color .25s ease}
+.service:hover{transform:none;box-shadow:none;background:#efe1dc}
+.service a{width:max-content;min-height:44px;display:flex;align-items:center;transition:transform .18s ease}
+.app-button:hover{background:#ead9d5;color:#3b182b}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button,.service,.service a{transition:none}}
