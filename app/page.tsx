@@ -17,7 +17,7 @@ const structuredData = {
     {
       "@type": "FAQPage",
       mainEntity: [
-        { "@type": "Question", name: "How much does a small business website cost?", acceptedAnswer: { "@type": "Answer", text: "Emily Good AI website projects start at CAD $3,500. Larger sites and business launches receive a scope-based quote." } },
+        { "@type": "Question", name: "How much does a small business website cost?", acceptedAnswer: { "@type": "Answer", text: "Emily Good AI landing pages start at CAD $2,500. Custom multi-page business websites start at CAD $3,500." } },
         { "@type": "Question", name: "Can I add the clinic app to my existing website?", acceptedAnswer: { "@type": "Answer", text: "Yes. Clinics can purchase the Jane-integrated app without replacing their current website." } },
         { "@type": "Question", name: "Does the clinic app replace Jane?", acceptedAnswer: { "@type": "Answer", text: "No. The clinic app integrates with Jane and gives patients a branded place to view appointments, chat, and receive home care." } },
         { "@type": "Question", name: "Do you provide website and app maintenance?", acceptedAnswer: { "@type": "Answer", text: "Yes. Monthly care plans cover updates, maintenance, and support for websites and apps." } },
@@ -95,22 +95,29 @@ export default function Home() {
         </div>
         <div className="pricing-grid">
           <article className="price-card">
-            <div className="price-top"><span>01</span><p>Website</p></div>
+            <div className="price-top"><span>01</span><p>Landing page</p></div>
+            <h3>Focused Landing Page</h3><p className="price-note">For one offer, campaign, or new business that needs a clear path to contact or book.</p>
+            <p className="price"><small>Starting at</small><b>$2,500</b><i>CAD</i></p>
+            <ul><li>One custom page</li><li>Mobile and desktop design</li><li>On-page SEO setup</li><li>Contact or booking path</li></ul>
+            <a className="price-link" href="mailto:hello@emilygoodai.com?subject=Landing%20page%20inquiry">Discuss your landing page <span>↗</span></a>
+          </article>
+          <article className="price-card preferred">
+            <div className="price-flag">Most requested</div>
+            <div className="price-top"><span>02</span><p>Website</p></div>
             <h3>Business Website</h3><p className="price-note">For businesses that need a credible site with a clear path to contact or book.</p>
             <p className="price"><small>Starting at</small><b>$3,500</b><i>CAD</i></p>
             <ul><li>Custom responsive design</li><li>Core service pages</li><li>On-page SEO setup</li><li>Contact or booking path</li></ul>
             <a className="price-link" href="mailto:hello@emilygoodai.com?subject=Business%20website%20inquiry">Discuss your website <span>↗</span></a>
           </article>
-          <article className="price-card preferred">
-            <div className="price-flag">Most requested</div>
-            <div className="price-top"><span>02</span><p>Launch</p></div>
+          <article className="price-card">
+            <div className="price-top"><span>03</span><p>Launch</p></div>
             <h3>Business Launch</h3><p className="price-note">For a new business that needs its public presence and internal tools built together.</p>
             <p className="price"><small>Starting at</small><b>$6,500</b><i>CAD</i></p>
             <ul><li>Launch planning</li><li>Custom business website</li><li>Google Workspace setup</li><li>Connected client systems</li></ul>
             <a className="price-link" href="mailto:hello@emilygoodai.com?subject=Business%20launch%20inquiry">Plan your launch <span>↗</span></a>
           </article>
           <article className="price-card app-price">
-            <div className="price-top"><span>03</span><p>Clinic app</p></div>
+            <div className="price-top"><span>04</span><p>Clinic app</p></div>
             <h3>Branded Clinic App</h3><p className="price-note">For massage, physiotherapy, and chiropractic clinics that use Jane.</p>
             <p className="price"><small>Setup from</small><b>$4,500</b><i>CAD</i></p>
             <p className="monthly">plus management from <strong>$399/month</strong></p>
@@ -121,7 +128,7 @@ export default function Home() {
         <div className="add-ons">
           <p><span>Google Workspace setup</span><strong>from $750 CAD</strong></p>
           <p><span>Website care</span><strong>from $225/month</strong></p>
-          <p><span>Custom business apps</span><strong>from $12,000 CAD</strong></p>
+          <p><span>Custom business apps</span><strong>from $9,000 CAD</strong></p>
         </div>
       </section>
 
@@ -137,11 +144,11 @@ export default function Home() {
       <section className="faq" id="faq">
         <div className="faq-title"><p className="kicker">Common questions</p><h2>Before we<br/><em>start.</em></h2></div>
         <div className="faq-list">
-          <details><summary>How much does a small business website cost?<span>+</span></summary><p>Website projects start at $3,500 CAD. A larger site with more pages, custom functions, or content support receives a scope-based quote.</p></details>
+          <details><summary>How much does a small business website cost?<span>+</span></summary><p>A focused landing page starts at $2,500 CAD. Custom multi-page business websites start at $3,500. Larger sites receive a scope-based quote.</p></details>
           <details><summary>Can I add the clinic app to my existing website?<span>+</span></summary><p>Yes. You can purchase the clinic app without replacing your current website. I match the app to your clinic branding and connect it with Jane.</p></details>
           <details><summary>Does the clinic app replace Jane?<span>+</span></summary><p>No. Jane continues to manage the clinic workflow it handles now. Your app gives patients a branded place to view appointments, chat, and receive home care.</p></details>
           <details><summary>Do you provide monthly website and app support?<span>+</span></summary><p>Yes. Monthly plans can cover updates, maintenance, and support. The fee depends on the website, app, and response time you need.</p></details>
-          <details><summary>Can you build a custom app outside healthcare?<span>+</span></summary><p>Yes. I scope custom apps around the people, tasks, and data involved in your business. Custom app projects start at $12,000 CAD.</p></details>
+          <details><summary>Can you build a custom app outside healthcare?<span>+</span></summary><p>Yes. I scope custom apps around the people, tasks, and data involved in your business. Custom app projects start at $9,000 CAD and increase with the scope.</p></details>
         </div>
       </section>
 
