@@ -24,6 +24,7 @@ a { color:inherit; text-decoration:none; }
 h1 { font-family:Georgia,"Times New Roman",serif; font-weight:400; font-size:clamp(64px,7.7vw,116px); line-height:.86; letter-spacing:-.055em; margin:0; }
 h1 em { font-weight:400; color:var(--blush); }
 .hero-positioning { font-size:clamp(52px,5.8vw,88px); line-height:.93; }
+.hero-positioning .hero-white { color:#fff; }
 .lede { max-width:560px; font-family:Georgia,serif; font-size:19px; line-height:1.65; color:#d7c5ca; margin:38px 0 32px; }
 .hero-actions { display:flex; align-items:center; gap:32px; }
 .button { min-height:46px; display:inline-flex; padding:15px 20px; align-items:center; justify-content:center; font-size:12px; text-transform:uppercase; letter-spacing:.13em; transition:transform .18s ease,background-color .18s ease,color .18s ease; }
