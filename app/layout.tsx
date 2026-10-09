@@ -30,6 +30,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://emily-good-ai.kit.com" />
+        <link rel="dns-prefetch" href="https://emily-good-ai.kit.com" />
+      </head>
       <body>
         {children}
         <Analytics />

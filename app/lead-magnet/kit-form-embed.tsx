@@ -20,6 +20,13 @@ export default function KitFormEmbed() {
     s.async = true;
     s.setAttribute("data-uid", KIT_UID);
     s.src = KIT_SRC;
+    // Hint the browser to prioritize fetching Kit's form script.
+    s.setAttribute("fetchpriority", "high");
+    const link = document.createElement("link");
+    link.rel = "preload";
+    link.as = "script";
+    link.href = KIT_SRC;
+    document.head.appendChild(link);
     host.appendChild(s);
   }, []);
 
