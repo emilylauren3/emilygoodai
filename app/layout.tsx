@@ -17,7 +17,7 @@ export async function generateMetadata(): Promise<Metadata> {
     keywords: ["small business website design", "custom web app development", "business app development", "Google Workspace setup", "business launch services", "website and app management"],
     alternates: { canonical: "https://emilygoodai.com" },
     robots: { index: true, follow: true },
-    icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
+    icons: { icon: "/favicon.png", shortcut: "/favicon.png", apple: "/favicon.png" },
     openGraph: { title, description, images: [socialImage] },
     twitter: { card: "summary_large_image", title, description, images: [socialImage] },
   };
