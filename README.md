@@ -98,3 +98,23 @@ actions tied to the current ChatGPT user. Leave public content anonymous.
 
 - [vinext Documentation](https://github.com/cloudflare/vinext)
 - [Drizzle D1 Guide](https://orm.drizzle.team/docs/get-started/d1-new)
+
+## Email capture (lead magnet)
+
+The free prompt pack form (`app/lead-magnet/prompt-pack-form.tsx`) posts to
+`/api/subscribe`, which adds the subscriber to Kit (formerly ConvertKit).
+
+Setup (about 10 minutes, once):
+
+1. Create a free Kit account at https://kit.com (free up to 10,000 subscribers).
+2. In Kit, create a form (any style) for the prompt pack list.
+3. Copy the form ID (from the form URL or embed settings) and your API secret
+   (Settings > Advanced > API Secret).
+4. In the Vercel dashboard, open the project > Settings > Environment Variables
+   and add:
+   - `KIT_API_SECRET` = your API secret
+   - `KIT_FORM_ID` = your form ID
+5. Redeploy (or push a commit) so the variables take effect.
+
+Until the variables are set, the form returns a 503 and logs the dropped
+signup server-side instead of silently losing it.

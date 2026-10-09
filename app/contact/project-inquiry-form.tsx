@@ -47,7 +47,7 @@ export default function ProjectInquiryForm() {
       <div className="form-grid">
         <label><span>Approximate number of pages</span><input name="pages" placeholder="e.g. 5–7 or not sure" /></label>
         <label><span>Target timeline</span><select name="timeline" required defaultValue=""><option value="" disabled>Select one</option><option>As soon as possible</option><option>Within 1–2 months</option><option>Within 3–6 months</option><option>Flexible</option></select></label>
-        <label><span>Estimated budget</span><select name="budget" required defaultValue=""><option value="" disabled>Select one</option><option>$2,500–$4,999 CAD</option><option>$5,000–$8,999 CAD</option><option>$9,000–$14,999 CAD</option><option>$15,000+ CAD</option><option>I need guidance</option></select></label>
+        <label><span>Estimated budget</span><select name="budget" required defaultValue=""><option value="" disabled>Select one</option><option>$2,500–$4,999 USD</option><option>$5,000–$8,999 USD</option><option>$9,000–$14,999 USD</option><option>$15,000+ USD</option><option>I need guidance</option></select></label>
         <label><span>Style preference</span><input name="style" placeholder="e.g. minimal, bold, editorial, warm" /></label>
       </div>
       <label><span>Features or functionality</span><textarea name="features" rows={4} placeholder="Booking, payments, client portal, team access, integrations, automations…" /></label>

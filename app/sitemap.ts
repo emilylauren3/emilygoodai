@@ -7,5 +7,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "https://emilygoodai.com/custom-apps", lastModified, changeFrequency: "monthly", priority: 0.9 },
     { url: "https://emilygoodai.com/pricing", lastModified, changeFrequency: "monthly", priority: 0.8 },
     { url: "https://emilygoodai.com/contact", lastModified, changeFrequency: "monthly", priority: 0.8 },
+    { url: "https://emilygoodai.com/free-website-prompts", lastModified, changeFrequency: "monthly", priority: 0.9 },
   ];
 }
