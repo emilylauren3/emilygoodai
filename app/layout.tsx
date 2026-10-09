@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { headers } from "next/headers";
 import { Analytics } from "@vercel/analytics/next";
-import KitPopup from "./lead-magnet/kit-popup";
 import "./globals.css";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -37,7 +36,7 @@ export default function RootLayout({
       </head>
       <body>
         {children}
-        <KitPopup />
+        <script async data-uid="0ef2658880" src="https://emily-good-ai.kit.com/0ef2658880/index.js"></script>
         <Analytics />
       </body>
     </html>

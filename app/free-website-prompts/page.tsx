@@ -1,6 +1,5 @@
 import { SiteFooter, SiteHeader } from "../site-chrome";
 import { pageMetadata } from "../seo";
-import PromptPackCta from "../lead-magnet/prompt-pack-cta";
 import { promptSteps } from "../lead-magnet/prompts";
 
 export function generateMetadata() {
@@ -41,8 +40,7 @@ export default function FreePromptsPage() {
         </div>
         <div className="landing-form-wrap">
           <h2>Get the full pack, <em>free.</em></h2>
-          <p>Enter your email and the seven prompts appear right here. One email, no spam, unsubscribe anytime.</p>
-          <p><PromptPackCta /></p>
+          <p>Enter your email in the popup and your download starts instantly. One email, no spam, unsubscribe anytime.</p>
         </div>
       </section>
       <SiteFooter />

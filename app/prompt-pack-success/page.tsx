@@ -1,6 +1,5 @@
 import { SiteFooter, SiteHeader } from "../site-chrome";
 import { pageMetadata } from "../seo";
-import MarkSubscribed from "./mark-subscribed";
 
 export function generateMetadata() {
   return pageMetadata(
@@ -13,7 +12,6 @@ export function generateMetadata() {
 export default function PromptPackSuccessPage() {
   return (
     <main>
-      <MarkSubscribed />
       <SiteHeader />
       <section className="page-hero">
         <p className="eyebrow"><span /> You are in</p>
