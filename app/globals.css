@@ -118,6 +118,17 @@ a:focus-visible { outline:2px solid var(--rose); outline-offset:5px; }
 .lead-note{font-size:11px!important;color:#a98b95!important;margin:22px auto 0!important;font-family:Arial,sans-serif!important}
 .lead-error{flex-basis:100%;color:#f0b9c2;font-size:12px;margin:6px 0 0}
 .lead-success{max-width:560px;margin:0 auto;border:1px solid #d4a3a54d;padding:34px 30px;background:#ffffff08}
+.kit-popup-overlay{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:20px;background:#180b13b8;backdrop-filter:blur(6px);animation:kitPopupIn .25s ease}
+.kit-popup{position:relative;max-width:520px;width:100%;max-height:90vh;overflow-y:auto;background:#f7f2ed;color:#321523;padding:48px 44px 40px;text-align:center;box-shadow:0 40px 100px #00000059;border-top:4px solid #d6b56c}
+.kit-popup .kicker{justify-content:center;margin-bottom:18px}
+.kit-popup h2{font-family:Georgia,serif;font-weight:400;font-size:clamp(30px,4vw,42px);line-height:1.05;letter-spacing:-.03em;margin:0 0 26px}
+.kit-popup h2 em{font-weight:400;color:#8e536b}
+.kit-popup .lead-note{color:#8b6f79!important;margin:18px auto 0!important}
+.kit-popup-close{position:absolute;top:10px;right:14px;border:0;background:none;color:#8b6f79;font-size:28px;line-height:1;cursor:pointer;padding:8px}
+.kit-popup-close:hover{color:#321523}
+.kit-form-embed{min-width:0}
+@keyframes kitPopupIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@media (max-width:560px){.kit-popup{padding:40px 26px 32px}}
 .lead-success-title{font-family:Georgia,serif;font-size:24px;margin:0 0 12px}
 .lead-success p{font-size:13px;color:#ceb9c1;line-height:1.7;margin:0}
 .lead-success a{color:#fff;text-decoration:underline;text-underline-offset:4px}

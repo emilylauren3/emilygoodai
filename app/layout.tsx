@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { headers } from "next/headers";
 import { Analytics } from "@vercel/analytics/next";
+import KitPopup from "./lead-magnet/kit-popup";
 import "./globals.css";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -17,7 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
     keywords: ["small business website design", "custom web app development", "business app development", "Google Workspace setup", "business launch services", "website and app management"],
     alternates: { canonical: "https://emilygoodai.com" },
     robots: { index: true, follow: true },
-    icons: { icon: "/favicon.png", shortcut: "/favicon.png", apple: "/favicon.png" },
+    icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
     openGraph: { title, description, images: [socialImage] },
     twitter: { card: "summary_large_image", title, description, images: [socialImage] },
   };
@@ -36,6 +37,7 @@ export default function RootLayout({
       </head>
       <body>
         {children}
+        <KitPopup />
         <Analytics />
       </body>
     </html>
