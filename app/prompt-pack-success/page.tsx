@@ -21,7 +21,7 @@ export default function PromptPackSuccessPage() {
           A backup copy is on its way to your inbox too.
         </p>
         <p style={{ marginTop: "1.5rem" }}>
-          <a className="button primary" href="/downloads/website-planning-prompt-pack.pdf" download>
+          <a className="button primary" href="/downloads/Website-Planning-Prompt-Pack.pdf" download>
             Download the Prompt Pack <span>↓</span>
           </a>
         </p>
